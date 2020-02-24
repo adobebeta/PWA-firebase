@@ -1,0 +1,41 @@
+<html lang="en">
+    <head>
+        <title>Todolist - Firestore</title>
+        <meta charset="utf8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+        <link rel="stylesheet" href="app.css">
+
+        <!-- Firebase CDN -->
+        <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-analytics.js"></script>
+
+        <!-- Firebase Connection -->
+        <script src="./firebase.js"></script>
+        <script src="./updateHTML.js"></script>
+        <script defer src="./main.js"></script>
+    </head>
+    <body>
+
+        <form id="todo-form">
+            <h1 class="title">Todolist</h1>
+            <div id="todo-input">
+                <input id="todo" type="text" name="Todolist" placeholder="Todo" />
+                <button id="create-todo">Add</button>
+            </div>
+            <label class="label" for="todo">Add todo</label>
+        </form>
+        <ul id="todo-list">
+            <p id="initialize">Initialize...</p>
+        </ul>
+
+        <!-- Template -->
+        <template id="template-list">
+            <li class="list">
+                <p class="todo-name"></p>
+                <button class="remove-todo">x</button>                
+            </li>
+        </template>
+    </body>
+</html>
